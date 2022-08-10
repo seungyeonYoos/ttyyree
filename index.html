@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            div {
+                border: 1px solid;
+                width: 500px;
+            }
+            #aaa {
+                background-color: rgb(216, 216, 216);
+                border: 0;
+                height: 0px;
+                overflow: hidden;
+                transition: 2s;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="bbb" onclick="Aclick();">안녕
+            <div id="aaa">
+                안녕<br>안녕<br>안녕<br>안녕<br>안녕<br>안녕
+            </div>
+        </div>
+
+        <script>
+            var click = document.getElementById("aaa");
+            click.style.height = "0px";
+
+            function Aclick() {
+                console.log(click)
+                if(click.style.height == "0px") {
+                    click.style.height = "500px"
+                }
+                else if (click.style.height == "500px") {
+                    click.style.height = "0px"
+                }
+            }
+
+
+            // $(".bbb").click(function() {
+            //     var height = $(".aaa").css("height");
+
+            //     if (height == "0px") {$(".aaa").css("height","500px");}
+            //     else if (height == "500px") {$(".aaa").css("height","0px");}
+            // })
+        </script>
+    </body>
+</html>
